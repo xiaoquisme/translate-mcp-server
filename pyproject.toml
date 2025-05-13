@@ -4,4 +4,8 @@ version = "0.1.0"
 description = "translate your text to target language"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastapi-mcp>=0.3.3",
+    "litellm>=1.69.1",
+]
