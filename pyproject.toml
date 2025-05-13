@@ -5,7 +5,8 @@ description = "translate your text to target language"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "dotenv>=0.9.9",
+    "python-dotenv",
     "fastapi-mcp>=0.3.3",
     "litellm>=1.69.1",
+    "mcp==1.7.0",
 ]
