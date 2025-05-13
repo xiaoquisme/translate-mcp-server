@@ -1,0 +1,7 @@
+[project]
+name = "translate-mcp-server"
+version = "0.1.0"
+description = "translate your text to target language"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
