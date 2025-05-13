@@ -59,7 +59,7 @@ By default, the server will run at `http://localhost:9988`.
 {
   "mcpServers": {
     "translate": {
-      "url": "http://localhost:9988"
+      "url": "http://localhost:9988/mcp"
     }
   }
 }
