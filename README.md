@@ -63,6 +63,8 @@ docker compose up -d
 ```
 By default, the server will run at `http://localhost:30100`.
 
+NOTE: when in container want to access host use `host.docker.internal` instead of `localhost`.
+
 ## MCP Usage
 
 ```json
