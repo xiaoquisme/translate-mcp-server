@@ -45,13 +45,23 @@ VOICE_MODEL='openai/tts-1' # Voice model
 MOTHER_LANGUAGE='zh'       # Mother language setting, used for TTS processing logic
 ```
 
-## Running the Server
+## Running
+
+### Running locally
 
 ```bash
 python main.py
 ```
 
 By default, the server will run at `http://localhost:9988`.
+
+### Running with Docker
+
+```bash
+docker network create mcp_network
+docker compose up -d
+```
+By default, the server will run at `http://localhost:30100`.
 
 ## MCP Usage
 

@@ -1,0 +1,13 @@
+services:
+    translate-mcp-server:
+        build: .
+        ports:
+        - "30100:8000"
+        env_file:
+          - .env
+        restart: unless-stopped
+networks:
+  default:
+    name: mcp_network
+    driver: bridge
+    external: true

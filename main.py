@@ -24,7 +24,7 @@ mcp.mount()
 
 def main():
     import uvicorn
-    uvicorn.run(app, port=os.getenv("PORT", 8899))
+    uvicorn.run(app, host=os.getenv("HOST", "127.0.0.1"), port=os.getenv("PORT", 8899))
 
 
 if __name__ == "__main__":
