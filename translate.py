@@ -21,7 +21,8 @@ class TranslateResponse(BaseModel):
     translated_text: str = Field(..., description="translated text in target language")
     success: bool = Field(..., description="whether translation was successful")
     error: Optional[str] = Field(None, description="error message if translation failed")
-    audio_base64: Optional[str] = Field(None, description="base64 encoded audio of source text (if requested)")
+    type: str = Field(..., description="type of response, e.g. 'text', 'audio'")
+    content: Optional[str] = Field(None, description="base64 encoded audio of source text (if requested)")
 
 
 async def text_to_speech(text: str, voice: str = "alloy") -> Optional[str]:
@@ -88,7 +89,8 @@ translated text:"""
             translated_text=translated_text,
             success=True,
             error=None,
-            audio_base64=audio_base64
+            content=audio_base64,
+            type="text" if audio_base64 is None else "audio"
         )
     except Exception as e:
         error_message = f"translation error: {str(e)}"
@@ -96,5 +98,6 @@ translated text:"""
             translated_text="",
             success=False,
             error=error_message,
-            audio_base64=None
+            type="text",
+            content=None
         )
